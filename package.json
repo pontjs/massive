@@ -1,0 +1,63 @@
+{
+  "name": "@pontx/massive",
+  "version": "0.1.0",
+  "description": "Type-safe SDK and CLI for the official Massive REST API",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && pontx cli build",
+    "dev": "tsup --watch",
+    "pontx": "pontx generate",
+    "type-check": "tsc --noEmit",
+    "example": "tsx examples/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "massive",
+    "stocks",
+    "market-data",
+    "api",
+    "sdk",
+    "typescript"
+  ],
+  "author": "Pontx contributors",
+  "license": "MIT",
+  "homepage": "https://pontx-hub.vercel.app/en/sdks/massive",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pontjs/massive.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.6.0"
+  },
+  "dependencies": {
+    "@pontx/sdk": "1.0.0-beta.0",
+    "pontx": "1.0.0-beta.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "pontx": {
+    "specDir": "dist/bin"
+  },
+  "bin": {
+    "pontx-massive": "./dist/bin/cli.cjs"
+  }
+}
