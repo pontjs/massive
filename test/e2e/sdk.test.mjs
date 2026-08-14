@@ -48,7 +48,7 @@ test("the built SDK completes a real HTTP round trip through its public API", as
     `${pathToFileURL(resolve(repositoryRoot, "dist/index.mjs")).href}?e2e=${Date.now()}`,
   );
   const client = esm.createMassiveClient({ apiKey: "test-api-key" });
-  const result = await client.common.getPreviousClose("AAPL", { adjusted: true });
+  const result = await client.getPreviousClose("AAPL", { adjusted: true });
   assert.deepEqual(result, payload);
   assert.equal(requests.length, 1);
   assert.equal(requests[0].method, "GET");

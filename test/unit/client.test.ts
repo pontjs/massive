@@ -23,7 +23,7 @@ describe("@pontx/massive", () => {
     const client = createMassiveClient({ apiKey: "test-api-key" });
 
     await expect(
-      client.common.getPreviousClose("AAPL", { adjusted: true }),
+      client.getPreviousClose("AAPL", { adjusted: true }),
     ).resolves.toEqual(payload);
 
     expect(fetchMock).toHaveBeenCalledOnce();
@@ -35,5 +35,11 @@ describe("@pontx/massive", () => {
     expect(new Headers(init.headers).get("Authorization")).toBe(
       "Bearer test-api-key",
     );
+  });
+
+  it("keeps the generated common controller as a backwards-compatible alias", () => {
+    const client = createMassiveClient({ apiKey: "test-api-key" });
+
+    expect(client.common.getPreviousClose).toBeTypeOf("function");
   });
 });
