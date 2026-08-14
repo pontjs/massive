@@ -18,7 +18,7 @@ Use your own Massive account, API key, subscription, and market-data entitlement
 import { createMassiveClient } from "@pontx/massive";
 
 const client = createMassiveClient({ apiKey: process.env.MASSIVE_API_KEY! });
-const result = await client.common.getPreviousClose("AAPL", {});
+const result = await client.getPreviousClose("AAPL", {});
 ```
 
 ## CLI

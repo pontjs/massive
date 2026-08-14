@@ -20,7 +20,7 @@ export default runCLI({
     generateSample: async () => `import { createMassiveClient } from "@pontx/massive";
 
 const client = createMassiveClient({ apiKey: process.env.MASSIVE_API_KEY! });
-const response = await client.common.getPreviousClose("AAPL", {});
+const response = await client.getPreviousClose("AAPL", {});
 console.log(response);
 `
   }]

@@ -1,4 +1,4 @@
-import { createGracefulClient } from "@pontx/sdk";
+import { createGracefulClient, type GracefulClient } from "@pontx/sdk";
 import { APIs } from "./apis/massive/apis";
 import { specMeta } from "./apis/massive/apiMeta";
 
@@ -24,5 +24,5 @@ export function createMassiveClient({
       const response = await fetch(url, { ...init, headers });
       return response.json();
     }
-  });
+  }) as GracefulClient<APIs> & APIs["common"];
 }
