@@ -5,9 +5,7 @@
 
 import type * as schemas from './schemas';
 
-// ============ common 模块 ============
-
-export declare namespace common {
+export declare namespace APIs {
   export type GetPreviousCloseParams = {
     /**
      * @description Return split-adjusted results
@@ -113,7 +111,12 @@ export declare namespace common {
 
 }
 
-export type common = {
+// ============ API 集合类型 ============
+
+/**
+ * API 类型定义
+ */
+export type APIs = {
   /**
    * GET /v2/last/trade/{stocksTicker}
    * Retrieve the latest available trade for a case-sensitive stock ticker. The result includes price, size, exchange, conditions, and nanosecond timestamps when supplied by the feed. Availability and recency depend on the account's stock-data plan.
@@ -137,7 +140,7 @@ export type common = {
      * @description Case-sensitive stock ticker, for example `AAPL`.
      */
     stocksTicker: string,
-    params: common.GetPreviousCloseParams,
+    params: APIs.GetPreviousCloseParams,
     requestInit?: RequestInit,
   ) => Promise<schemas.AggregateResponse>;
 
@@ -167,7 +170,7 @@ export type common = {
      * @description End date in `YYYY-MM-DD` format or Unix timestamp in milliseconds.
      */
     to: string,
-    params: common.GetAggregateBarsParams,
+    params: APIs.GetAggregateBarsParams,
     requestInit?: RequestInit,
   ) => Promise<schemas.AggregateResponse>;
 
@@ -177,7 +180,7 @@ export type common = {
    * @summary: Get unified market snapshots
    */
   getMarketSnapshot: (
-    params: common.GetMarketSnapshotParams,
+    params: APIs.GetMarketSnapshotParams,
     requestInit?: RequestInit,
   ) => Promise<schemas.UnifiedSnapshotResponse>;
 
@@ -187,7 +190,7 @@ export type common = {
    * @summary: List and search supported tickers
    */
   listTickers: (
-    params: common.ListTickersParams,
+    params: APIs.ListTickersParams,
     requestInit?: RequestInit,
   ) => Promise<schemas.TickerListResponse>;
 
@@ -201,22 +204,11 @@ export type common = {
      * @description Stock ticker
      */
     ticker: string,
-    params: common.GetTickerDetailsParams,
+    params: APIs.GetTickerDetailsParams,
     requestInit?: RequestInit,
   ) => Promise<schemas.TickerDetailsResponse>;
 
 };
 
-// ============ API 集合类型 ============
-
-/**
- * API 类型定义
- */
-export type APIs = {
-  /** common 模块 */
-  common: common;
-};
-
 export declare namespace APIs {
-  export { common };
 }

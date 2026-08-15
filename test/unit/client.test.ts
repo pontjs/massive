@@ -37,9 +37,9 @@ describe("@pontx/massive", () => {
     );
   });
 
-  it("keeps the generated common controller as a backwards-compatible alias", () => {
+  it("does not synthesize a common controller for untagged Endpoints", () => {
     const client = createMassiveClient({ apiKey: "test-api-key" });
 
-    expect(client.common.getPreviousClose).toBeTypeOf("function");
+    expect(() => (client as any).common).toThrow('API "common" not found');
   });
 });

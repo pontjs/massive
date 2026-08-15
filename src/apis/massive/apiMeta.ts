@@ -1,13 +1,13 @@
 export const specMeta = {
   name: "Massive Stock Market Data API",
-  hasTags: true,
+  hasTags: false,
   url: [
     {
       url: "https://api.massive.com"
     }
   ],
   apis: {
-    "common/getLastTrade": {
+    "getLastTrade": {
       method: "GET",
       path: "/v2/last/trade/{stocksTicker}",
       consumes: [],
@@ -17,7 +17,7 @@ export const specMeta = {
       bodyParams: null
     },
 
-    "common/getPreviousClose": {
+    "getPreviousClose": {
       method: "GET",
       path: "/v2/aggs/ticker/{stocksTicker}/prev",
       consumes: [],
@@ -27,7 +27,7 @@ export const specMeta = {
       bodyParams: null
     },
 
-    "common/getAggregateBars": {
+    "getAggregateBars": {
       method: "GET",
       path: "/v2/aggs/ticker/{stocksTicker}/range/{multiplier}/{timespan}/{from}/{to}",
       consumes: [],
@@ -37,7 +37,7 @@ export const specMeta = {
       bodyParams: null
     },
 
-    "common/getMarketSnapshot": {
+    "getMarketSnapshot": {
       method: "GET",
       path: "/v3/snapshot",
       consumes: [],
@@ -47,7 +47,7 @@ export const specMeta = {
       bodyParams: null
     },
 
-    "common/listTickers": {
+    "listTickers": {
       method: "GET",
       path: "/v3/reference/tickers",
       consumes: [],
@@ -57,7 +57,7 @@ export const specMeta = {
       bodyParams: null
     },
 
-    "common/getTickerDetails": {
+    "getTickerDetails": {
       method: "GET",
       path: "/v3/reference/tickers/{ticker}",
       consumes: [],

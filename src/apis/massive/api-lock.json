@@ -9,12 +9,16 @@
           "status": {
             "type": "string",
             "description": "Machine-readable request status.",
-            "example": "ERROR"
+            "examples": [
+              "ERROR"
+            ]
           },
           "error": {
             "type": "string",
             "description": "Short error category or message.",
-            "example": "API Key was not provided"
+            "examples": [
+              "API Key was not provided"
+            ]
           },
           "message": {
             "type": "string",
@@ -43,32 +47,44 @@
           "T": {
             "type": "string",
             "description": "Exchange ticker symbol; commonly present in previous-day responses.",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           },
           "c": {
             "type": "number",
             "description": "Close price.",
-            "example": 115.97
+            "examples": [
+              115.97
+            ]
           },
           "h": {
             "type": "number",
             "description": "Highest price.",
-            "example": 117.59
+            "examples": [
+              117.59
+            ]
           },
           "l": {
             "type": "number",
             "description": "Lowest price.",
-            "example": 114.13
+            "examples": [
+              114.13
+            ]
           },
           "n": {
             "type": "integer",
             "description": "Number of transactions in the aggregate window.",
-            "example": 2
+            "examples": [
+              2
+            ]
           },
           "o": {
             "type": "number",
             "description": "Open price.",
-            "example": 115.55
+            "examples": [
+              115.55
+            ]
           },
           "otc": {
             "type": "boolean",
@@ -78,17 +94,23 @@
             "type": "integer",
             "format": "int64",
             "description": "Window start as a Unix timestamp in milliseconds.",
-            "example": 1605042000000
+            "examples": [
+              1605042000000
+            ]
           },
           "v": {
             "type": "number",
             "description": "Trading volume.",
-            "example": 131704427
+            "examples": [
+              131704427
+            ]
           },
           "vw": {
             "type": "number",
             "description": "Volume-weighted average price.",
-            "example": 116.3058
+            "examples": [
+              116.3058
+            ]
           }
         },
         "additionalProperties": true
@@ -107,32 +129,44 @@
           "ticker": {
             "type": "string",
             "description": "Exchange ticker symbol.",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           },
           "adjusted": {
             "type": "boolean",
             "description": "Whether prices are adjusted for splits.",
-            "example": true
+            "examples": [
+              true
+            ]
           },
           "queryCount": {
             "type": "integer",
             "description": "Number of base minute or day aggregates queried.",
-            "example": 1
+            "examples": [
+              1
+            ]
           },
           "request_id": {
             "type": "string",
             "description": "Server-assigned request identifier.",
-            "example": "6a7e466379af0a71039d60cc78e72282"
+            "examples": [
+              "6a7e466379af0a71039d60cc78e72282"
+            ]
           },
           "resultsCount": {
             "type": "integer",
             "description": "Number of result bars returned.",
-            "example": 1
+            "examples": [
+              1
+            ]
           },
           "status": {
             "type": "string",
             "description": "Request status.",
-            "example": "OK"
+            "examples": [
+              "OK"
+            ]
           },
           "results": {
             "type": "array",
@@ -145,7 +179,9 @@
             "type": "string",
             "format": "uri",
             "description": "Absolute URL for the next page, when present. Authentication may still need to be supplied.",
-            "example": "https://api.massive.com/v2/aggs/ticker/AAPL/range/1/day/1578114000000/2020-01-10?cursor=bGltaXQ9MiZzb3J0PWFzYw"
+            "examples": [
+              "https://api.massive.com/v2/aggs/ticker/AAPL/range/1/day/1578114000000/2020-01-10?cursor=bGltaXQ9MiZzb3J0PWFzYw"
+            ]
           }
         },
         "additionalProperties": true
@@ -168,23 +204,31 @@
           "T": {
             "type": "string",
             "description": "Exchange ticker symbol.",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           },
           "c": {
             "type": "array",
             "description": "Trade condition codes.",
             "items": {
               "type": "integer",
-              "example": 37
+              "examples": [
+                37
+              ]
             },
-            "example": [
-              37
+            "examples": [
+              [
+                37
+              ]
             ]
           },
           "ds": {
             "type": "string",
             "description": "Trade size including any fractional component, encoded as a decimal string.",
-            "example": "25.0"
+            "examples": [
+              "25.0"
+            ]
           },
           "e": {
             "type": "integer",
@@ -194,50 +238,68 @@
             "type": "integer",
             "format": "int64",
             "description": "Trade Reporting Facility receipt time as a Unix timestamp in nanoseconds.",
-            "example": 1617901342969796400
+            "examples": [
+              1617901342969796400
+            ]
           },
           "i": {
             "type": "string",
             "description": "Trade identifier, unique per ticker/exchange/TRF combination.",
-            "example": "118749"
+            "examples": [
+              "118749"
+            ]
           },
           "p": {
             "type": "number",
             "description": "Price per whole share.",
-            "example": 129.8473
+            "examples": [
+              129.8473
+            ]
           },
           "q": {
             "type": "integer",
             "format": "int64",
             "description": "Increasing event sequence number for the ticker; gaps are possible.",
-            "example": 3135876
+            "examples": [
+              3135876
+            ]
           },
           "r": {
             "type": "integer",
             "description": "Trade Reporting Facility identifier.",
-            "example": 202
+            "examples": [
+              202
+            ]
           },
           "s": {
             "type": "number",
             "description": "Trade size in shares.",
-            "example": 25
+            "examples": [
+              25
+            ]
           },
           "t": {
             "type": "integer",
             "format": "int64",
             "description": "SIP receipt time as a Unix timestamp in nanoseconds.",
-            "example": 1617901342969834000
+            "examples": [
+              1617901342969834000
+            ]
           },
           "x": {
             "type": "integer",
             "description": "Exchange identifier; resolve through Massive exchange reference data.",
-            "example": 4
+            "examples": [
+              4
+            ]
           },
           "y": {
             "type": "integer",
             "format": "int64",
             "description": "Participant/exchange event time as a Unix timestamp in nanoseconds.",
-            "example": 1617901342968000000
+            "examples": [
+              1617901342968000000
+            ]
           },
           "z": {
             "type": "integer",
@@ -247,7 +309,9 @@
               3
             ],
             "description": "Listing tape: 1=A (NYSE), 2=B (NYSE Arca/NYSE American), 3=C (Nasdaq).",
-            "example": 3
+            "examples": [
+              3
+            ]
           }
         },
         "additionalProperties": true
@@ -264,7 +328,9 @@
           "request_id": {
             "type": "string",
             "description": "Server-assigned request identifier.",
-            "example": "f05562305bd26ced64b98ed68b3c5d96"
+            "examples": [
+              "f05562305bd26ced64b98ed68b3c5d96"
+            ]
           },
           "results": {
             "$ref": "#/components/schemas/LastTrade"
@@ -272,7 +338,9 @@
           "status": {
             "type": "string",
             "description": "Request status.",
-            "example": "OK"
+            "examples": [
+              "OK"
+            ]
           }
         },
         "additionalProperties": true
@@ -285,74 +353,108 @@
           "change": {
             "type": "number",
             "description": "Absolute session price change.",
-            "example": 2.588
+            "examples": [
+              2.588
+            ]
           },
           "change_percent": {
             "type": "number",
             "description": "Session percentage change.",
-            "example": 1.492
+            "examples": [
+              1.492
+            ]
           },
           "early_trading_change": {
             "type": "number",
-            "example": 0
+            "examples": [
+              0
+            ]
           },
           "early_trading_change_percent": {
             "type": "number",
-            "example": 0
+            "examples": [
+              0
+            ]
           },
           "regular_trading_change": {
             "type": "number",
-            "example": 2.01
+            "examples": [
+              2.01
+            ]
           },
           "regular_trading_change_percent": {
             "type": "number",
-            "example": 1.159
+            "examples": [
+              1.159
+            ]
           },
           "late_trading_change": {
             "type": "number",
-            "example": 0.578
+            "examples": [
+              0.578
+            ]
           },
           "late_trading_change_percent": {
             "type": "number",
-            "example": 0.329
+            "examples": [
+              0.329
+            ]
           },
           "close": {
             "type": "number",
-            "example": 175.51
+            "examples": [
+              175.51
+            ]
           },
           "high": {
             "type": "number",
-            "example": 176.63
+            "examples": [
+              176.63
+            ]
           },
           "low": {
             "type": "number",
-            "example": 175.02
+            "examples": [
+              175.02
+            ]
           },
           "open": {
             "type": "number",
-            "example": 176.04
+            "examples": [
+              176.04
+            ]
           },
           "volume": {
             "type": "number",
-            "example": 46632535
+            "examples": [
+              46632535
+            ]
           },
           "previous_close": {
             "type": "number",
-            "example": 173.5
+            "examples": [
+              173.5
+            ]
           },
           "price": {
             "type": "number",
-            "example": 176.0883
+            "examples": [
+              176.0883
+            ]
           },
           "vwap": {
             "type": "number",
-            "example": 175.8562
+            "examples": [
+              175.8562
+            ]
           },
           "last_updated": {
             "type": "integer",
             "format": "int64",
             "description": "Last update as a Unix timestamp in nanoseconds.",
-            "example": 1753833601079793200
+            "examples": [
+              1753833601079793200
+            ]
           }
         },
         "additionalProperties": true
@@ -366,36 +468,52 @@
             "type": "integer",
             "format": "int64",
             "description": "Unix timestamp in nanoseconds.",
-            "example": 1753833599239197400
+            "examples": [
+              1753833599239197400
+            ]
           },
           "timeframe": {
             "type": "string",
             "description": "Data recency label.",
-            "example": "REAL-TIME"
+            "examples": [
+              "REAL-TIME"
+            ]
           },
           "ask": {
             "type": "number",
-            "example": 176.09
+            "examples": [
+              176.09
+            ]
           },
           "ask_size": {
             "type": "number",
-            "example": 3
+            "examples": [
+              3
+            ]
           },
           "ask_exchange": {
             "type": "integer",
-            "example": 12
+            "examples": [
+              12
+            ]
           },
           "bid": {
             "type": "number",
-            "example": 176.05
+            "examples": [
+              176.05
+            ]
           },
           "bid_size": {
             "type": "number",
-            "example": 1
+            "examples": [
+              1
+            ]
           },
           "bid_exchange": {
             "type": "integer",
-            "example": 12
+            "examples": [
+              12
+            ]
           }
         },
         "additionalProperties": true
@@ -409,33 +527,47 @@
             "type": "integer",
             "format": "int64",
             "description": "Unix timestamp in nanoseconds.",
-            "example": 1753833599213779700
+            "examples": [
+              1753833599213779700
+            ]
           },
           "timeframe": {
             "type": "string",
-            "example": "REAL-TIME"
+            "examples": [
+              "REAL-TIME"
+            ]
           },
           "id": {
             "type": "string",
-            "example": "593866"
+            "examples": [
+              "593866"
+            ]
           },
           "price": {
             "type": "number",
-            "example": 176.0883
+            "examples": [
+              176.0883
+            ]
           },
           "size": {
             "type": "number",
-            "example": 48
+            "examples": [
+              48
+            ]
           },
           "exchange": {
             "type": "integer",
-            "example": 4
+            "examples": [
+              4
+            ]
           },
           "conditions": {
             "type": "array",
             "items": {
               "type": "integer",
-              "example": 12
+              "examples": [
+                12
+              ]
             }
           }
         },
@@ -448,37 +580,53 @@
         "properties": {
           "close": {
             "type": "number",
-            "example": 176.08
+            "examples": [
+              176.08
+            ]
           },
           "high": {
             "type": "number",
-            "example": 176.1
+            "examples": [
+              176.1
+            ]
           },
           "low": {
             "type": "number",
-            "example": 176.04
+            "examples": [
+              176.04
+            ]
           },
           "open": {
             "type": "number",
-            "example": 176.04
+            "examples": [
+              176.04
+            ]
           },
           "transactions": {
             "type": "integer",
-            "example": 133
+            "examples": [
+              133
+            ]
           },
           "volume": {
             "type": "number",
-            "example": 25313
+            "examples": [
+              25313
+            ]
           },
           "vwap": {
             "type": "number",
-            "example": 176.0761
+            "examples": [
+              176.0761
+            ]
           },
           "last_updated": {
             "type": "integer",
             "format": "int64",
             "description": "Unix timestamp in nanoseconds.",
-            "example": 1753833601079793200
+            "examples": [
+              1753833601079793200
+            ]
           }
         },
         "additionalProperties": true
@@ -494,12 +642,16 @@
           "ticker": {
             "type": "string",
             "description": "The ticker symbol for the asset.",
-            "example": "NVDA"
+            "examples": [
+              "NVDA"
+            ]
           },
           "name": {
             "type": "string",
             "description": "The name of this contract.",
-            "example": "Nvidia Corp"
+            "examples": [
+              "Nvidia Corp"
+            ]
           },
           "type": {
             "type": "string",
@@ -511,7 +663,9 @@
               "stocks"
             ],
             "description": "The asset class for this ticker.",
-            "example": "stocks"
+            "examples": [
+              "stocks"
+            ]
           },
           "market_status": {
             "type": "string",
@@ -523,28 +677,38 @@
               "late_trading"
             ],
             "description": "The market status for the market that trades this ticker. Possible values for stocks, options, crypto, and forex snapshots are open, closed, early_trading, or late_trading. Possible values for indices snapshots are regular_trading, closed, early_trading, and late_trading.",
-            "example": "closed"
+            "examples": [
+              "closed"
+            ]
           },
           "error": {
             "type": "string",
             "description": "Error category for this ticker.",
-            "example": "NOT_FOUND"
+            "examples": [
+              "NOT_FOUND"
+            ]
           },
           "message": {
             "type": "string",
             "description": "Error detail for this ticker.",
-            "example": "Ticker not found."
+            "examples": [
+              "Ticker not found."
+            ]
           },
           "fmv": {
             "type": "number",
             "description": "Massive Fair Market Value; limited to eligible Business plans.",
-            "example": 0.05
+            "examples": [
+              0.05
+            ]
           },
           "fmv_last_updated": {
             "type": "integer",
             "format": "int64",
             "description": "FMV calculation time as a Unix timestamp in nanoseconds.",
-            "example": 1636573458757383400
+            "examples": [
+              1636573458757383400
+            ]
           },
           "session": {
             "$ref": "#/components/schemas/SnapshotSession"
@@ -578,7 +742,9 @@
           "request_id": {
             "type": "string",
             "description": "A request id assigned by the server.",
-            "example": "cef2c957341a8e50b6455a7b8ef9702e"
+            "examples": [
+              "cef2c957341a8e50b6455a7b8ef9702e"
+            ]
           },
           "results": {
             "type": "array",
@@ -590,7 +756,9 @@
           "status": {
             "type": "string",
             "description": "The status of this request's response.",
-            "example": "OK"
+            "examples": [
+              "OK"
+            ]
           }
         },
         "additionalProperties": true
@@ -607,7 +775,9 @@
           "active": {
             "type": "boolean",
             "description": "Whether the asset was actively traded on the queried date.",
-            "example": true
+            "examples": [
+              true
+            ]
           },
           "base_currency_name": {
             "type": "string",
@@ -620,17 +790,23 @@
           "cik": {
             "type": "string",
             "description": "The CIK number for this ticker.",
-            "example": "0001090872"
+            "examples": [
+              "0001090872"
+            ]
           },
           "composite_figi": {
             "type": "string",
             "description": "The composite OpenFIGI number for this ticker.",
-            "example": "BBG000BWQYZ5"
+            "examples": [
+              "BBG000BWQYZ5"
+            ]
           },
           "currency_name": {
             "type": "string",
             "description": "The name of the currency that this asset is traded with.",
-            "example": "usd"
+            "examples": [
+              "usd"
+            ]
           },
           "currency_symbol": {
             "type": "string",
@@ -645,7 +821,9 @@
             "type": "string",
             "format": "date-time",
             "description": "The information is accurate up to this time.",
-            "example": "2021-04-25T00:00:00Z"
+            "examples": [
+              "2021-04-25T00:00:00Z"
+            ]
           },
           "locale": {
             "type": "string",
@@ -654,7 +832,9 @@
               "us"
             ],
             "description": "The locale of the asset.",
-            "example": "us"
+            "examples": [
+              "us"
+            ]
           },
           "market": {
             "type": "string",
@@ -666,32 +846,44 @@
               "stocks"
             ],
             "description": "The market type of the asset.",
-            "example": "stocks"
+            "examples": [
+              "stocks"
+            ]
           },
           "name": {
             "type": "string",
             "description": "The name of the asset. For stocks/equities this will be the companies registered name. For crypto/fx this will be the name of the currency or coin pair.",
-            "example": "Agilent Technologies Inc."
+            "examples": [
+              "Agilent Technologies Inc."
+            ]
           },
           "primary_exchange": {
             "type": "string",
             "description": "ISO 10383 MIC of the primary exchange.",
-            "example": "XNYS"
+            "examples": [
+              "XNYS"
+            ]
           },
           "share_class_figi": {
             "type": "string",
             "description": "The share Class OpenFIGI number for this ticker.",
-            "example": "BBG001SCTQY4"
+            "examples": [
+              "BBG001SCTQY4"
+            ]
           },
           "ticker": {
             "type": "string",
             "description": "The exchange symbol that this item is traded under.",
-            "example": "A"
+            "examples": [
+              "A"
+            ]
           },
           "type": {
             "type": "string",
             "description": "Massive ticker-type code.",
-            "example": "CS"
+            "examples": [
+              "CS"
+            ]
           }
         },
         "additionalProperties": true
@@ -704,18 +896,24 @@
           "count": {
             "type": "integer",
             "description": "The total number of results for this request.",
-            "example": 1
+            "examples": [
+              1
+            ]
           },
           "next_url": {
             "type": "string",
             "format": "uri",
             "description": "Absolute URL for the next page, when present.",
-            "example": "https://api.massive.com/v3/reference/tickers?cursor=YWN0aXZlPXRydWUmZGF0ZT0yMDIxLTA0LTI1JmxpbWl0PTEmb3JkZXI9YXNjJnBhZ2VfbWFya2VyPUElN0M5YWRjMjY0ZTgyM2E1ZjBiOGUyNDc5YmZiOGE1YmYwNDVkYzU0YjgwMDcyMWE2YmI1ZjBjMjQwMjU4MjFmNGZiJnNvcnQ9dGlja2Vy"
+            "examples": [
+              "https://api.massive.com/v3/reference/tickers?cursor=YWN0aXZlPXRydWUmZGF0ZT0yMDIxLTA0LTI1JmxpbWl0PTEmb3JkZXI9YXNjJnBhZ2VfbWFya2VyPUElN0M5YWRjMjY0ZTgyM2E1ZjBiOGUyNDc5YmZiOGE1YmYwNDVkYzU0YjgwMDcyMWE2YmI1ZjBjMjQwMjU4MjFmNGZiJnNvcnQ9dGlja2Vy"
+            ]
           },
           "request_id": {
             "type": "string",
             "description": "A request id assigned by the server.",
-            "example": "e70013d92930de90e089dc8fa098888e"
+            "examples": [
+              "e70013d92930de90e089dc8fa098888e"
+            ]
           },
           "results": {
             "type": "array",
@@ -727,7 +925,9 @@
           "status": {
             "type": "string",
             "description": "The status of this request's response.",
-            "example": "OK"
+            "examples": [
+              "OK"
+            ]
           }
         },
         "additionalProperties": true
@@ -739,22 +939,30 @@
         "properties": {
           "address1": {
             "type": "string",
-            "example": "One Apple Park Way"
+            "examples": [
+              "One Apple Park Way"
+            ]
           },
           "address2": {
             "type": "string"
           },
           "city": {
             "type": "string",
-            "example": "Cupertino"
+            "examples": [
+              "Cupertino"
+            ]
           },
           "state": {
             "type": "string",
-            "example": "CA"
+            "examples": [
+              "CA"
+            ]
           },
           "postal_code": {
             "type": "string",
-            "example": "95014"
+            "examples": [
+              "95014"
+            ]
           }
         },
         "additionalProperties": true
@@ -767,12 +975,16 @@
           "icon_url": {
             "type": "string",
             "format": "uri",
-            "example": "https://api.massive.com/v1/reference/company-branding/d3d3LmFwcGxlLmNvbQ/images/2022-01-10_icon.png"
+            "examples": [
+              "https://api.massive.com/v1/reference/company-branding/d3d3LmFwcGxlLmNvbQ/images/2022-01-10_icon.png"
+            ]
           },
           "logo_url": {
             "type": "string",
             "format": "uri",
-            "example": "https://api.massive.com/v1/reference/company-branding/d3d3LmFwcGxlLmNvbQ/images/2022-01-10_logo.svg"
+            "examples": [
+              "https://api.massive.com/v1/reference/company-branding/d3d3LmFwcGxlLmNvbQ/images/2022-01-10_logo.svg"
+            ]
           }
         },
         "additionalProperties": false
@@ -796,54 +1008,74 @@
               "description": {
                 "type": "string",
                 "description": "A description of the company and what they do/offer.",
-                "example": "Apple designs a wide variety of consumer electronic devices, including smartphones (iPhone), tablets (iPad), PCs (Mac), smartwatches (Apple Watch), AirPods, and TV boxes (Apple TV), among others."
+                "examples": [
+                  "Apple designs a wide variety of consumer electronic devices, including smartphones (iPhone), tablets (iPad), PCs (Mac), smartwatches (Apple Watch), AirPods, and TV boxes (Apple TV), among others."
+                ]
               },
               "homepage_url": {
                 "type": "string",
                 "format": "uri",
                 "description": "The URL of the company's website homepage.",
-                "example": "https://www.apple.com"
+                "examples": [
+                  "https://www.apple.com"
+                ]
               },
               "list_date": {
                 "type": "string",
                 "format": "date",
                 "description": "The date that the symbol was first publicly listed in the format YYYY-MM-DD.",
-                "example": "1980-12-12"
+                "examples": [
+                  "1980-12-12"
+                ]
               },
               "market_cap": {
                 "type": "number",
                 "description": "The most recent close price of the ticker multiplied by weighted outstanding shares.",
-                "example": 2771126040150
+                "examples": [
+                  2771126040150
+                ]
               },
               "phone_number": {
                 "type": "string",
                 "description": "The phone number for the company behind this ticker.",
-                "example": "(408) 996-1010"
+                "examples": [
+                  "(408) 996-1010"
+                ]
               },
               "round_lot": {
                 "type": "number",
                 "description": "Round lot size of this security.",
-                "example": 100
+                "examples": [
+                  100
+                ]
               },
               "share_class_shares_outstanding": {
                 "type": "number",
                 "description": "The recorded number of outstanding shares for this particular share class.",
-                "example": 16406400000
+                "examples": [
+                  16406400000
+                ]
               },
               "sic_code": {
                 "type": "string",
                 "description": "The standard industrial classification code for this ticker.",
-                "example": "3571"
+                "examples": [
+                  "3571"
+                ]
               },
               "sic_description": {
                 "type": "string",
                 "description": "A description of this ticker's SIC code.",
-                "example": "ELECTRONIC COMPUTERS"
+                "examples": [
+                  "ELECTRONIC COMPUTERS"
+                ]
               },
               "ticker_root": {
                 "type": "string",
                 "description": "The root of a specified ticker. For example, the root of BRK.A is BRK.",
-                "example": "AAPL"
+                "examples": [
+                  "AAPL"
+                ]
               },
               "ticker_suffix": {
                 "type": "string",
@@ -852,12 +1084,16 @@
               "total_employees": {
                 "type": "number",
                 "description": "The approximate number of employees for the company.",
-                "example": 154000
+                "examples": [
+                  154000
+                ]
               },
               "weighted_shares_outstanding": {
                 "type": "number",
                 "description": "The shares outstanding calculated assuming all shares of other share classes are converted to this share class.",
-                "example": 16334371000
+                "examples": [
+                  16334371000
+                ]
               }
             },
             "additionalProperties": true
@@ -879,7 +1115,9 @@
           "request_id": {
             "type": "string",
             "description": "A request id assigned by the server.",
-            "example": "31d59dda-80e5-4721-8496-d0d32a654afe"
+            "examples": [
+              "31d59dda-80e5-4721-8496-d0d32a654afe"
+            ]
           },
           "results": {
             "$ref": "#/components/schemas/TickerDetails"
@@ -887,7 +1125,9 @@
           "status": {
             "type": "string",
             "description": "The status of this request's response.",
-            "example": "OK"
+            "examples": [
+              "OK"
+            ]
           }
         },
         "additionalProperties": true
@@ -902,19 +1142,22 @@
     }
   },
   "apis": {
-    "common/getLastTrade": {
+    "getLastTrade": {
       "summary": "Get the last stock trade",
+      "operationId": "getLastTrade",
       "consumes": [],
       "description": "Retrieve the latest available trade for a case-sensitive stock ticker. The result includes price, size, exchange, conditions, and nanosecond timestamps when supplied by the feed. Availability and recency depend on the account's stock-data plan.",
       "method": "GET",
       "path": "/v2/last/trade/{stocksTicker}",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/LastTradeResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -928,27 +1171,44 @@
           "schema": {
             "description": "Case-sensitive stock ticker, for example `AAPL`.",
             "type": "string",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           }
         }
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {
+              "stocksTicker": "AAPL"
+            },
+            "query": {},
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     },
-    "common/getPreviousClose": {
+    "getPreviousClose": {
       "summary": "Get previous-day aggregate",
+      "operationId": "getPreviousClose",
       "consumes": [],
       "description": "Retrieve the previous trading day's OHLC, volume, VWAP, and transaction count for a stock ticker. Results are split-adjusted by default.",
       "method": "GET",
       "path": "/v2/aggs/ticker/{stocksTicker}/prev",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/AggregateResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -962,7 +1222,9 @@
           "schema": {
             "description": "Case-sensitive stock ticker, for example `AAPL`.",
             "type": "string",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           }
         },
         {
@@ -973,27 +1235,46 @@
             "description": "Return split-adjusted results",
             "type": "boolean",
             "default": true,
-            "example": true
+            "examples": [
+              true
+            ]
           }
         }
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {
+              "stocksTicker": "AAPL"
+            },
+            "query": {
+              "adjusted": true
+            },
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     },
-    "common/getAggregateBars": {
+    "getAggregateBars": {
       "summary": "Get custom aggregate bars",
+      "operationId": "getAggregateBars",
       "consumes": [],
       "description": "Retrieve historical OHLC and volume bars over a custom date range in Eastern Time. Bars are built from qualifying trades; an interval with no eligible trades is omitted rather than returned as an empty bar.",
       "method": "GET",
       "path": "/v2/aggs/ticker/{stocksTicker}/range/{multiplier}/{timespan}/{from}/{to}",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/AggregateResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -1007,7 +1288,9 @@
           "schema": {
             "description": "Case-sensitive stock ticker, for example `AAPL`.",
             "type": "string",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           }
         },
         {
@@ -1018,7 +1301,9 @@
             "description": "Timespan multiplier",
             "type": "integer",
             "minimum": 1,
-            "example": 1
+            "examples": [
+              1
+            ]
           }
         },
         {
@@ -1037,7 +1322,9 @@
               "quarter",
               "year"
             ],
-            "example": "minute"
+            "examples": [
+              "minute"
+            ]
           }
         },
         {
@@ -1047,7 +1334,9 @@
           "schema": {
             "description": "Start date in `YYYY-MM-DD` format or Unix timestamp in milliseconds.",
             "type": "string",
-            "example": "2025-01-02"
+            "examples": [
+              "2025-01-02"
+            ]
           }
         },
         {
@@ -1057,7 +1346,9 @@
           "schema": {
             "description": "End date in `YYYY-MM-DD` format or Unix timestamp in milliseconds.",
             "type": "string",
-            "example": "2025-01-31"
+            "examples": [
+              "2025-01-31"
+            ]
           }
         },
         {
@@ -1068,7 +1359,9 @@
             "description": "Whether results are adjusted for stock splits.",
             "type": "boolean",
             "default": true,
-            "example": true
+            "examples": [
+              true
+            ]
           }
         },
         {
@@ -1083,7 +1376,9 @@
               "desc"
             ],
             "default": "asc",
-            "example": "asc"
+            "examples": [
+              "asc"
+            ]
           }
         },
         {
@@ -1096,27 +1391,52 @@
             "minimum": 1,
             "maximum": 50000,
             "default": 5000,
-            "example": 5000
+            "examples": [
+              5000
+            ]
           }
         }
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {
+              "stocksTicker": "AAPL",
+              "multiplier": 1,
+              "timespan": "minute",
+              "from": "2025-01-02",
+              "to": "2025-01-31"
+            },
+            "query": {
+              "adjusted": true,
+              "sort": "asc",
+              "limit": 5000
+            },
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     },
-    "common/getMarketSnapshot": {
+    "getMarketSnapshot": {
       "summary": "Get unified market snapshots",
+      "operationId": "getMarketSnapshot",
       "consumes": [],
       "description": "Retrieve paginated snapshots across stocks, options, forex, crypto, and indices. A snapshot can include current session metrics plus the latest trade, quote, and minute bar according to plan entitlements.",
       "method": "GET",
       "path": "/v3/snapshot",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/UnifiedSnapshotResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -1177,7 +1497,9 @@
             "minimum": 1,
             "maximum": 250,
             "default": 10,
-            "example": 10
+            "examples": [
+              10
+            ]
           }
         },
         {
@@ -1195,21 +1517,36 @@
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {},
+            "query": {
+              "limit": 10
+            },
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     },
-    "common/listTickers": {
+    "listTickers": {
       "summary": "List and search supported tickers",
+      "operationId": "listTickers",
       "consumes": [],
       "description": "Retrieve a paginated list of ticker symbols across supported asset classes. Filter by symbol, asset type, market, exchange, identifiers, date, search text, or active status.",
       "method": "GET",
       "path": "/v3/reference/tickers",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/TickerListResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -1266,7 +1603,9 @@
           "schema": {
             "description": "Primary exchange Market Identifier Code (MIC), for example `XNAS`.",
             "type": "string",
-            "example": "XNAS"
+            "examples": [
+              "XNAS"
+            ]
           }
         },
         {
@@ -1298,7 +1637,9 @@
             "description": "Point-in-time date in `YYYY-MM-DD` format; defaults to the latest available date.",
             "type": "string",
             "format": "date",
-            "example": "2025-01-31"
+            "examples": [
+              "2025-01-31"
+            ]
           }
         },
         {
@@ -1308,7 +1649,9 @@
           "schema": {
             "description": "Search text matched against ticker symbols and company names.",
             "type": "string",
-            "example": "Apple"
+            "examples": [
+              "Apple"
+            ]
           }
         },
         {
@@ -1319,7 +1662,9 @@
             "description": "Active-listing filter",
             "type": "boolean",
             "default": true,
-            "example": true
+            "examples": [
+              true
+            ]
           }
         },
         {
@@ -1345,7 +1690,9 @@
             "minimum": 1,
             "maximum": 1000,
             "default": 100,
-            "example": 100
+            "examples": [
+              100
+            ]
           }
         },
         {
@@ -1368,21 +1715,37 @@
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {},
+            "query": {
+              "active": true,
+              "limit": 100
+            },
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     },
-    "common/getTickerDetails": {
+    "getTickerDetails": {
       "summary": "Get ticker reference details",
+      "operationId": "getTickerDetails",
       "consumes": [],
       "description": "Get ticker reference details. Official reference-data endpoint.",
       "method": "GET",
       "path": "/v3/reference/tickers/{ticker}",
       "responses": {
         "200": {
+          "description": "Successful response",
           "schema": {
             "$ref": "#/components/schemas/TickerDetailsResponse"
           }
         },
         "default": {
+          "description": "Request failed because of authentication, authorization, validation, rate limiting, or a server error.",
           "schema": {
             "$ref": "#/components/schemas/ErrorResponse"
           }
@@ -1396,7 +1759,9 @@
           "schema": {
             "description": "Stock ticker",
             "type": "string",
-            "example": "AAPL"
+            "examples": [
+              "AAPL"
+            ]
           }
         },
         {
@@ -1407,13 +1772,27 @@
             "description": "Point-in-time date in `YYYY-MM-DD` format; defaults to the latest available date.",
             "type": "string",
             "format": "date",
-            "example": "2025-01-31"
+            "examples": [
+              "2025-01-31"
+            ]
           }
         }
       ],
       "produces": [
         "application/json"
-      ]
+      ],
+      "requestExamples": {
+        "default": {
+          "request": {
+            "path": {
+              "ticker": "AAPL"
+            },
+            "query": {},
+            "headers": {}
+          },
+          "expectedStatus": "200"
+        }
+      }
     }
   },
   "name": "massive",
@@ -1434,10 +1813,5 @@
     }
   ],
   "ext": {},
-  "tags": [
-    {
-      "name": "common",
-      "description": "Stock quotes, aggregates, snapshots, and reference-data endpoints"
-    }
-  ]
+  "tags": []
 }
